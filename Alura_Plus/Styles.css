@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundaria: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --cor-de-botao-selecionado: #0459c1;
+    --fonte-principal: 'inter';
+
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container {
+    height: 107vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.principal {
+    background-image: url(img/Background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.container__titulo {
+    font-size: 28px; /* Serve para mudar o tamanho da fonte */
+    font-weight: 700; /* Serve para mudar o peso da fonte "a espessura" */
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none; /* serve para tirar o sublinhado dos links */
+    margin-bottom: 1em;
+}
+
+.container__botao:hover {
+    background-color: var(--cor-de-botao-selecionado);
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+    text-decoration: none; /* serve para tirar o sublinhado dos links */
+
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundaria);
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundaria);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.secundario__botao:hover {
+    background-color: var(--cor-de-botao-selecionado);
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__titulo {
+    text-align: center;
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /*Serve para tirar os pontinhos dos icones da lista q aparecem na pagina web*/
+    margin: 5em 0;
+}
+
+.lista__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    padding: 5% 0%;
+}
+
+.rodape__logo {
+    align-items: center;
+    padding: 2%;
+}
+
+.rodape__lista {
+    list-style-type: none;
+    display: flex;
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+a {
+    text-decoration: none;/* Para tirar o sublinhado de uma ancora ou link e preciso utilizar o seletor do html no caso a sigla da 'a' e depois abrir as chavez e digitar o comando 'text-decoration: none' */
+    color: var(--branco-principal);
+}
+
+.lista__link {
+    font-family: var(--fonte-principal);
+    margin: 1%;
+    font-size: 16px;   
+}
+
+.lista__link a:hover { /* Dessa forma selecionamos a ancora"a" e atribuimos a ela com o "hover" para q ao passar o mause em cima dos links ele mude cor */ 
+    color: var(--botao-azul);
+}
+
+.lista__link a:active { /* Desta forma ao precionar as ancorar no caso os links e nao soltar o botao do mouse a cor de azul por selecionar mudara para o purple */ 
+    color: purple;
+}
+
+.rodape__texto {
+    font-size: 14px;
+    padding: 1%;
+    
+}
+
