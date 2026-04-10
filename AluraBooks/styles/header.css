@@ -1,0 +1,81 @@
+
+.cabeçalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/menu/Menu.svg");/*os dois ponto no inicio serve para q a busca da foto volte a pasta e encontre o arquivo pois dentro da pasta styles nao tinha a pasta img*/
+    background-repeat: no-repeat; /*para q o icone do menu pare de repetir pois passou o tamanho de 24px*/
+    background-position: center; /*para q o icone de menu permaneça centralizado igual a todos os outros itens*/
+    display: inline-block; /*o comando precisa ser inline-block para q os comandos width e height tenham efeito se tivesse colocado apenas inline o comando nao iria ler a altura e a largura*/       
+}
+
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /*esse position: relative libera a opção de voce colocar outros atributos como "top, left, hight e bottom" em portugues "topo, esquerdo, direito e baixo"*/
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 0em 1em;
+  
+}
+
+.container__imagem__logo {
+    width: 35px;
+    padding: 0em 1em;
+}
+
+
+.container__imagem {
+    width: 45px;
+    padding: 1em 0.7em; /*ao utilizar apenas esse pading o menu hamburguer comecou a duplicar a imagem pois passou do tamanho de 24px para corrigir foi preciso colocar outra classe no seletor cabeçalho q foi a "backgroud-repeat: no-repeat" dessa forma a imagem para de repetir porem para centralizar ele com o outros itens sera preciso utilicar a propriedade "background-position: center"*/
+}
+
+.lista-menu {
+    display: none;/*esse elemento faz com que a lista do menu suma e nao ucupe espaço*/
+    position: absolute;/*O position: absolute nos permite movimentar o elemento de acordo com outro que veio antes ou que é o "pai", e que esteja em uma position diferente de "estática", que é a padrão.
+    Queríamos que a lista se movesse de acordo com o cabeçalho, que ficasse abaixo do cabeçalho. Por isso, inserimos um "position: relative" no ".cabeçalho" para que ficasse diferente de "estática". Não vamos usar nenhuma das propriedades liberadas para ele, mas queremos que ele fique diferente de "estático" para que o "position: absolute" da lista funcione.
+    Assim, conseguimos movimentar a lista de acordo com o cabeçalho. Agora, a lista já está acima dele, porque não inserimos mais nada*/
+    top: 100%;/*Agora vamos colocá-la abaixo. Para isso, vamos inserir "top: 100%"*/
+    left: 0%;
+    width: 60vw;
+    font-family: var(--fonte-principal);
+    margin: 0;
+}
+
+.container__botao:checked~.lista-menu { /*nessa acao foi executado a classe container__botao que selecionou o input la do HTML logo em seguida foi colocado dois pontos checked que e uma pseudo classe q detecta se esta preenchido o input type="checkbox" e depois foi colocado um tiu "~" q é um "COMBINADOR CSS" ele procura o outro elemento que vem em seguida dele q no caso foi a classe "lista-menu.(Esse e um caso que chega mais perto de uma condicional CSS. Acontece o seguinte se o container__botao estiver checked no caso foi clicado e esta com a caixa preenchida ele vai abrir a lista-menu e vai executar o display block nela caso o checked nao esteja preenchido nao vai acontecer nada a lista no caso vai continuar oculta)*/
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1.5em; 
+    background-color: var(--branco);/*O atributo background-color e para alterar a cor de fundo*/
+    /*OBS: Ao utilizar o padding para esçamento interno a cor ja preenche altomatico o tamanho do padding se fosse margin no lugar do pading nao daria certo*/
+    
+}
+.lista-menu__titulo {
+    color: var(--laranja);/*Atributo color e para alterar a cor das Fonts "palavras"*/
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;/*serve para mudar as letras todas para maiuscula font de caixa alta*/
+    text-decoration: none;
+    font-size: 16px;
+
+}
+
+.container__botao {
+    display: none;
+}
+

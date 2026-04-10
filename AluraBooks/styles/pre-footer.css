@@ -1,0 +1,48 @@
+.pre-footer {
+    background: var(--branco);
+    font-family: var(--fonte-principal);
+    color: var(--Azul);
+    display: flex;
+    flex-direction: column;    
+    text-align: left;   
+    padding: 1em 1em 1.5em 1em;
+}
+
+.pre-footer__titulo {    
+    text-align: left;
+    padding: 0.5em 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.pre-footer__texto {
+    font-size: 16px;
+    font-weight: 0;
+    padding: 0.5em 4em 1em 0em;
+}
+
+.pre-footer__input {
+    color: var(--Azul); /*esse color e para alterar a cor da escrida dentro da caixa de pesqisa*/
+    width: 90%; /*este item determina o tamanho de ocupaçoa na tela*/
+    display: flex;
+    align-items: center;
+    text-align: center;/*este item centraliza o testo digitado na caixa de pesquisa*/
+    font-weight: 200; /*esse item determina o peso da fonte ao digitar na caixa de pesquisa*/
+    font-size: 14px; /*este item determina o tamanh da fonte*/
+    padding: 1em;
+    border-width: 2px;
+    border-radius: 24px;    
+    background: url("../img/Email.svg");
+    background-repeat: no-repeat;
+    background-position: left center;/*para centralizar a lupa de pesquisa no centro da caixa de pesquiza tanto no eixo "y" quanto no eixo "x"*/
+    background-position-x: 5%; /*para fazer com que a lupa de pesquisa chegue um pouco para a direita chegando mais perto do texto da caixa de pesquisa*/
+}
+
+.pre-footer__input::placeholder { /*Para alterar a cor do contexto de dica da barra de pesquisa precisa fazer esse comando de comparação*/
+    color: var(--Azul);
+    opacity: 0.6;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 2.5em; /* Serve para movimentar o texto da caixa de captura de emails da esquerca para a direita */
+    }

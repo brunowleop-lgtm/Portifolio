@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8"> <!--Inforna a codificação de caracteres da minha página q sao mais utilizados no bradil como alguns acentos a sidilia "ç" entre outros-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Essa Tag informa o tamanho da tela que estamos acessando "width - representa a margura" e o "device-width - reprecenta a largura do dispositivo" entao dessa forma a pagina detecta qual a largura do aparelho utilizado. E o "Initial-scale=1.0 representa a escala ele utiliza o 1.0 para dizer que nao esta  utilizando zoo nem nada"-->
+        <title>AluraBooks</title> <!--Nome na aba da janela do navegador-->
+        <link rel="stylesheet" href="reset.css"> <!--Serve para resetar configurações padoes do css que podem causar comflitos em outros navegadores dispositivos diferentes, dependendo do projeto nao e necessario resetar tudo pode apenas tirar as margins e os padings-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/> <!--Este e o link do carrocel-->
+        <link rel="stylesheet" href="styles.css"> <!--estamos lincando ou associando um arquivo no outro, nesse caso o css ao html. stylesheet siginifica folha de stilo q no caso aqui e o CSS e o Href adiciona o diretorio do arquivo de stilo. Esse arquivo precisa sempre estar ao final do head para nao ocorrer nenhum conflito de sobre por escritar ou estilos-->
+    </head>
+
+    <body>
+        <header class="cabeçalho">
+            <div class="container">
+                <input type="checkbox" id="menu" class="container__botao"> <!--o "input type="checkbox" serve para detectar um clique e ficar preenchido, no caso ele guarda a ação do click-->
+                <label for="menu"> <!--A tag "label" serve para associar tudo q esta dentro dela com outro elemento atravez do "ID" que nesse caso foi o id="menu" no formato de "<label for="menu">" associando assim o "span ao input"-->
+                    <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+                </label>
+                <ul class="lista-menu">
+                    <li class="lista-menu__titulo">Categorias</li>
+                    <li class="lista-menu__item">
+                        <a href="#" class="lista-menu__link">Programação</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="#" class="lista-menu__link">Front-End</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="#" class="lista-menu__link">Infraestrutura</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="#" class="lista-menu__link">Business</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="#" class="lista-menu__link">Design & UX</a>
+                    </li>
+                </ul>
+                <img src="img/menu/Logo.svg" alt="Logo da Alurabooks" class="container__imagem__logo">
+            </div>
+            <div class="container">
+                <a href="#"><img src="img/menu/Favoritos.svg" alt="Meus Favoritos" class="container__imagem"></a>
+                <a href="#"><img src="img/menu/Compras.svg" alt="Carrinho de Compras" class="container__imagem"></a>
+                <a href="#"><img src="img/menu/Usuário.svg" alt="Meu Perfil" class="container__imagem"></a>
+            </div>
+        </header>
+        
+        <section class="banner">
+            <h2 class="banner__titulo">Já sabe por onde começar?</h2> <!--Titulo com H2 por recomendação de utilisar o H! apenas uma vez por pagina-->
+            <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p> <!--tag p para criar o paragrafo-->
+            <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?"> <!--Input type search q é o input de pesquisa vai criar uma caixa de pesquisa com um texto dentro por causa da tag placeholder que ao comecar a digitar o texto some, geralmente um texto de pergunta-->
+        </section>
+
+        <section class="carrossel">
+            <h2 class="carrossel__titulo">Últimos lançamentos</h2>
+
+            <!-- Slider main container -->
+            <div class="swiper">
+
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="img/livros/1-ApacheKafka.svg" alt="Livro sobre apache kafka e spring boot da Alura books"></div>
+                    <div class="swiper-slide"><img src="img/livros/2-Liderança.svg" alt="Livro sobre liderança em design da alura books"></div>
+                    <div class="swiper-slide"><img src="img/livros/2-Javascript.svg" alt="Livro sobre JavaScript Assertivo da Alura Books"></div>
+                    <div class="swiper-slide"><img src="img/livros/Angular-Guia Front-end.svg" a alt="Livro guia sobre Front-End da Alura books"></div>
+                    <div class="swiper-slide"><img src="img/livros/Portugol.svg" alt="Livro sobre Portugol da Alura books"></div>
+                    <div class="swiper-slide"><img src="img/livros/Angular-Acessibilidade.svg" alt="Livro sobre Acessibilidade da Alura books"></div>
+                    
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+
+            <div class="card">
+                <!-- Primeira Linha -->
+                <div class="card__descricao">
+                    <!-- Primeira Coluna -->
+                    <div class="descricao">
+                        <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+                        <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+                        <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>                        
+                    </div>
+                    <!-- Segunda Coluna-->
+                    <img src="img/Angular.svg" class="descricao__imagem" alt="Logo Angular">
+                </div>
+
+                <!-- Segunda Linha -->
+                <div class="card__botoes">
+                    <!-- Primeira Coluna-->
+                    <ul class="botoes">
+                        <li class="botoes__itens"><img src="img/menu/Favoritos.svg" alt="Favoritar livros"></li>
+                        <li class="botoes__itens"><img src="img/menu/Compras.svg" alt="Adicionar no carrinho"></li>
+                    </ul>
+                    <!-- Seunda Coluna -->
+                    <a href="#" class="botoes__ancora">Saiba mais</a>
+                </div>
+            </div>
+           
+        </section> 
+        
+        <section class="carrossel">
+            <h2 class="carrossel__titulo">Últimos lançamentos</h2>
+
+            <!-- Slider main container -->
+            <div class="swiper">
+
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="img/livros/2-Javascript.svg" alt="Livro sobre JavaScript Assertivo da Alura Books"></div>
+                    <div class="swiper-slide"><img src="img/livros/1-ApacheKafka.svg" alt="Livro sobre apache kafka e spring boot da Alura books"></div>
+                    <div class="swiper-slide"><img src="img/livros/2-Liderança.svg" alt="Livro sobre liderança em design da alura books"></div>
+                    <div class="swiper-slide"><img src="img/livros/Angular-Guia Front-end.svg" a alt="Livro guia sobre Front-End da Alura books"></div>
+                    <div class="swiper-slide"><img src="img/livros/Portugol.svg" alt="Livro sobre Portugol da Alura books"></div>
+                    <div class="swiper-slide"><img src="img/livros/Angular-Acessibilidade.svg" alt="Livro sobre Acessibilidade da Alura books"></div>
+                    
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+
+            <div class="card">
+                <!-- Primeira Linha -->
+                <div class="card__descricao">
+                    <!-- Primeira Coluna -->
+                    <div class="descricao">
+                        <img src="img/Estrelinhas.svg" class="estrelinhas" alt="cinco estralas de classificação">
+                        <h3 class="descricao__titulo-escritora">Autora do Mês</h3>
+                        <h2 class="descricao__nome-escritora">Juliana Agarikov</h2>
+                        <p class="descricao__texto-escritora">Analista de sistemas e escritora, Juliana é especialista em Front-End.</p>                        
+                    </div>
+                    <!-- Segunda Coluna-->
+                    <img src="img/Perfil-escritora.svg" class="descricao__imagem" alt="imagem da escritora">
+                </div>
+
+                <!-- Segunda Linha -->
+                <div class="card__botoes">
+                    <!-- Primeira Coluna-->
+                    <ul class="botoes">
+                        <li class="botoes__itens"><img src="img/menu/Favoritos.svg" alt="Favoritar livros"></li>
+                        <li class="botoes__itens"><img src="img/menu/Compras.svg" alt="Adicionar no carrinho"></li>
+                    </ul>
+                    <!-- Seunda Coluna -->
+                    <a href="#" class="botoes__ancora">Saiba mais</a>
+                </div>
+            </div>
+           
+        </section>
+
+        <section class="topicos">
+            <h2 class="topicos__titulos">TÓPICOS VISITADOS RECENTEMENTE</h2>
+            <ul class="topicos__lista">
+                <li class="topicos__item">
+                    <a href="#" class="topicos__link">Android</a>
+                </li>
+                 <li class="topicos__item">
+                    <a href="#" class="topicos__link">Marketing Digital</a>
+                </li>
+                 <li class="topicos__item">
+                    <a href="#" class="topicos__link">Agile</a>
+                </li>
+                 <li class="topicos__item">
+                    <a href="#" class="topicos__link">Startups</a>
+                </li>
+                 <li class="topicos__item">
+                    <a href="#" class="topicos__link">HTML & CSS</a>
+                </li>
+                 <li class="topicos__item">
+                    <a href="#" class="topicos__link">Python</a>
+                </li>
+                 <li class="topicos__item">
+                    <a href="#" class="topicos__link">OO</a>
+                </li>
+                 <li class="topicos__item">
+                    <a href="#" class="topicos__link">Java</a>
+                </li>
+            </ul>
+
+        </section>
+
+        <section class="pre-footer">
+            <h2 class="pre-footer__titulo">Fique por dentro das novidades!</h2>
+            <p class="pre-footer__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+            <input type="email" class="pre-footer__input" placeholder="Cadastre seu e-mail">
+        </section>
+
+        <video src="https://www.youtube.com/watch?v=IFF0J5bC04U&list=RDIFF0J5bC04U&start_radio=1" class="video" controls></video>
+
+        <hr/>
+
+        <footer>
+            <h2 class="footer">Grupo Alura</h2>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script> <!--Este tambem faz parte do carrocel e precisa sempre estar no final depois de toda a escrita do HTML e antes do fechamento do "body"-->
+        <script>
+            const swiper = new Swiper('.swiper', {
+                spaceBetween: 10,
+                slidesPerView: 3,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
+            });
+        </script>
+               
+    </body>
+</html>
